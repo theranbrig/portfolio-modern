@@ -10,6 +10,7 @@ const BlogsStyles = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     p.dev {
         text-align: center;
         font-size: 1.2rem;

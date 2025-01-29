@@ -1,21 +1,20 @@
-/**
- * ©2025 8eo, Inc.
- */
-
+import { MDXProps } from 'mdx/types';
+import { JSX } from 'react';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { atomOneDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
-
+import Model from '../app/content/3d-model.mdx';
+import CSSGrid from '../app/content/css-grid.mdx';
 interface IPost {
     slug: string;
 }
 
-async function getProps(slug: string) {
-    const post = await import(`../app/content/${slug}.mdx`);
-    return post.default;
-}
+const posts: { id: string; component: (props: MDXProps) => JSX.Element }[] = [
+    { id: '3d-model', component: Model },
+    { id: 'css-grid', component: CSSGrid },
+];
 
-export default async function Post({ slug }: IPost) {
-    const PostData = await getProps(slug);
+function Post({ slug }: IPost) {
+    const PostData = posts.find((post) => post.id === slug)?.component;
 
     const codeBlock = (props: { children: string; className?: string }) => {
         return (
@@ -35,5 +34,9 @@ export default async function Post({ slug }: IPost) {
         code: codeBlock,
     };
 
+    if (!PostData) return null;
+
     return <PostData components={overrideComponents} />;
 }
+
+export default Post;

@@ -1,7 +1,6 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
 import { blogPosts, TBlogPost } from '../../../../public/data';
@@ -28,7 +27,7 @@ export default function BlogId({}) {
                 >
                     <div className='hero-section'>
                         <div className='hero-image-container'>
-                            <Image className='hero-image' src={image} alt={`${title} background`} width={100} height={100} />
+                            <img className='hero-image' src={image} alt={`${title} background`} />
                         </div>
                         <div className='hero-text-container'>
                             <h1 className='hero-text'>{title}</h1>

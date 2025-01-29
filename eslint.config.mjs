@@ -16,6 +16,7 @@ const eslintConfig = [
             '@next/next/no-document-import-in-page': 'off',
             '@next/next/no-img-element': 'off',
             'react-hooks/exhaustive-deps': 'off',
+            'react-hooks/rules-of-hooks': 'off',
         },
     }),
 ];

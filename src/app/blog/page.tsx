@@ -11,13 +11,13 @@ const Blogs = () => {
 
     return (
         <Layout>
-            <BlogsStyles>
-                <motion.div
-                    exit={{ opacity: 0, scale: 0 }}
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ type: 'spring', ease: 'easeIn', duration: 1, mass: 0.5 }}
-                >
+            <motion.div
+                exit={{ opacity: 0, scale: 0 }}
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ type: 'spring', ease: 'easeIn', duration: 1, mass: 0.5 }}
+            >
+                <BlogsStyles>
                     <h1>Blog</h1>
                     <p className='dev'>
                         All blog posts can also be found over at{' '}
@@ -41,8 +41,8 @@ const Blogs = () => {
                             </Link>
                         ))}
                     </div>
-                </motion.div>
-            </BlogsStyles>
+                </BlogsStyles>
+            </motion.div>
         </Layout>
     );
 };
