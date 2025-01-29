@@ -1,95 +1,47 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+'use client';
 
-export default function Home() {
-  return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+import Layout from '@/components/Layout';
+import { motion } from 'framer-motion';
+import { NextSeo } from 'next-seo';
+import { ReactTyped } from 'react-typed';
+import IconLink from '../components/IconLink';
+import HomePageStyles from '../components/styles/HomePageStyles';
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
-}
+const Home = () => {
+    const strings = ["I'm a Web Developer<br/> and UI Consultant."];
+
+    return (
+        <Layout>
+            <NextSeo title='Theran Brigowatz | Home' description='Web Developer and UI Consultant' />
+            <motion.div
+                exit={{ opacity: 0, scale: 0 }}
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ type: 'spring', ease: 'easeIn', duration: 1, mass: 0.5 }}
+            >
+                <HomePageStyles>
+                    <div className='main-content'>
+                        <div className='splash-box'>
+                            <h1>therAn briGoWAtz</h1>
+                            <div className='typed-content'>
+                                <ReactTyped strings={strings} typeSpeed={50} backSpeed={50} style={{ whiteSpace: 'pre' }} />
+                            </div>
+                            <div className='splash-icons'>
+                                <IconLink name='Theran Brigowatz Github' link='https://github.com/theranbrig' icon='github-blue' alt='Link to GitHub' />
+                                <IconLink name='Theran Brigowatz linked in' link='https://dev.to/theranbrig' icon='dev' alt='Link to Dev.to' />
+                                <IconLink
+                                    name='Theran Brigowatz Linkedin'
+                                    link='https://linkedin.com/in/theran-brigowatz'
+                                    icon='linkedin'
+                                    alt='Link to Linkedin'
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </HomePageStyles>
+            </motion.div>
+        </Layout>
+    );
+};
+
+export default Home;
