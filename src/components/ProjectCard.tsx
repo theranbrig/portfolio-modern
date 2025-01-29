@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import { TProject } from '../../public/data';
 
@@ -9,14 +10,14 @@ const ProjectCard = ({ project }: { project: TProject }) => {
             <Link href={`/portfolio/[slug]`} as={`/portfolio/${slug}`}>
                 <div className='project-link'>
                     <div className='main-icon'>
-                        <img src={`icons/${icon}.svg`} alt={icon} />
+                        <Image src={`icons/${icon}.svg`} alt={icon} height={100} width={100} />
                     </div>
                     <div className='project-info'>
                         <h3>{title}</h3>
                         <h4>{description}</h4>
                         <div className='project-icons'>
                             {tech.map((el) => (
-                                <img src={`icons/${el}.svg`} key={el} alt={el} />
+                                <Image src={`icons/${el}.svg`} key={el} alt={el} height={100} width={100} />
                             ))}
                         </div>
                     </div>

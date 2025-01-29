@@ -8,7 +8,7 @@ type ProgressiveImageProps = {
 
 const ProgressiveImage = ({ preview, image, alt }: ProgressiveImageProps) => {
     const [currentImage, setCurrentImage] = useState(preview);
-    const [loading, setLoading] = useState(false);
+    const [loading, setLoading] = useState(true);
 
     const fetchImage = (src: string) => {
         const loadingImage = new Image();

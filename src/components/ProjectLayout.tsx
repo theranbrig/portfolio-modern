@@ -1,28 +1,33 @@
+import Image from 'next/image';
+import Link from 'next/link';
+import { TProject } from '../../public/data';
 import ProgressiveImage from './ProgressiveImage';
 import ProjectStyles from './styles/ProjectStyles';
 
-const ProjectLayout = (props) => {
-    const { title, technology, deployLink, gitLink, created, description, extendedDescription, icon, screenShots, tech, mobile } = props.project;
+const ProjectLayout = ({ project }: { project: TProject }) => {
+    const { title, technology, gitLink, created, description, extendedDescription, icon, screenShots, tech, mobile } = project;
 
     return (
         <ProjectStyles>
             <div className='project-title'>
                 <div className='top-title'>
                     <h1>{title}</h1>
-                    <img src={`../icons/${icon}.svg`} alt={icon} />
+                    <Image src={`../icons/${icon}.svg`} alt={icon} height={100} width={100} />
                 </div>
                 <p>{description}</p>
                 <div className='project-links'>
                     {gitLink ? (
                         <a href={gitLink} target='_blank' rel='noopener noreferrer' className='git-link'>
-                            <img src='../icons/github-blue.svg' alt='github' />
+                            <Image src='../icons/github-blue.svg' alt='github' height={100} width={100} />
                             <p>Code</p>
                         </a>
                     ) : (
                         <p className='private'>Code is in private repo.</p>
                     )}
                 </div>
-                <div className='project-icons'>{tech && tech.map((el, idx) => <img src={`../icons/${el}.svg`} key={el} alt={`${el} icon`} />)}</div>
+                <div className='project-icons'>
+                    {tech && tech.map((el) => <Image src={`../icons/${el}.svg`} key={el} alt={`${el} icon`} height={100} width={100} />)}
+                </div>
             </div>
             <div className='project-info'>
                 <div className='project-left'>
@@ -34,9 +39,9 @@ const ProjectLayout = (props) => {
                             Built with: <strong>{technology}</strong>
                         </p>
                         <p>Started in {created}</p>
-                        <a href='/portfolio'>
-                            <img src='../icons/return.svg' alt='return' /> <span>Back To Portfolio</span>
-                        </a>
+                        <Link href='/portfolio'>
+                            <Image src='../icons/return.svg' alt='return' height={100} width={100} /> <span>Back To Portfolio</span>
+                        </Link>
                     </div>
                 </div>
                 <div className='project-right'>

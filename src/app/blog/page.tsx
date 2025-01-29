@@ -1,17 +1,16 @@
 'use client';
-import BlogsStyles from '@/components/styles/BlogsStyles';
 import { motion } from 'framer-motion';
-import { NextSeo } from 'next-seo';
+import Image from 'next/image';
 import Link from 'next/link';
 import { blogPosts } from '../../../public/data';
 import Layout from '../../components/Layout';
+import BlogsStyles from '../../components/styles/BlogsStyles';
 
 const Blogs = () => {
     const posts = blogPosts.sort((a, b) => b.unix - a.unix);
 
     return (
         <Layout>
-            <NextSeo title='Theran Brigowatz | Blog' description='A collection of development blog posts.' />
             <BlogsStyles>
                 <motion.div
                     exit={{ opacity: 0, scale: 0 }}
@@ -30,7 +29,7 @@ const Blogs = () => {
                         {posts.map((post) => (
                             <Link href='/blog/[year]?id=[id]' as={`/blog/${post.slug}`} key={post.slug}>
                                 <div className='post-container'>
-                                    <img src={post.image} alt={post.title} />
+                                    <Image src={post.image} alt={post.title} width={100} height={100} />
                                     <div className='post-description'>
                                         <h2>{post.title}</h2>
                                         <div>

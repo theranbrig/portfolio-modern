@@ -2,11 +2,6 @@ import createMDX from '@next/mdx';
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-    // experimental: {
-    //     turbo: {
-    //         resolveExtensions: ['.md', '.tsx', '.ts', '.jsx', '.js', '.mjs', '.json'],
-    //     },
-    // },
     pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx', 'mdx'],
     webpack(config) {
         config.resolve.fallback = {
@@ -16,6 +11,18 @@ const nextConfig: NextConfig = {
         };
 
         return config;
+    },
+    images: {
+        remotePatterns: [
+            {
+                protocol: 'https',
+                hostname: 'images.unsplash.com',
+            },
+            {
+                protocol: 'https',
+                hostname: 'res.cloudinary.com',
+            },
+        ],
     },
 };
 

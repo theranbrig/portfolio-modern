@@ -1,15 +1,13 @@
 'use client';
-import ContactLink from '@/components/ContactLink';
-import ContactPageStyles from '@/components/styles/ContactPageStyles';
 import { motion } from 'framer-motion';
-import { NextSeo } from 'next-seo';
 import Link from 'next/link';
+import ContactLink from '../../components/ContactLink';
 import Layout from '../../components/Layout';
+import ContactPageStyles from '../../components/styles/ContactPageStyles';
 
 const Contact = () => {
     return (
         <Layout>
-            <NextSeo title='Theran Brigowatz | Home' description='Get in touch with me about work opportunities' />
             <ContactPageStyles>
                 <motion.div
                     exit={{ opacity: 0, scale: 0 }}

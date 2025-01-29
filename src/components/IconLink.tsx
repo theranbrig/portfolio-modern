@@ -1,15 +1,16 @@
-import PropTypes from 'prop-types';
+import Image from 'next/image';
 
-const IconLink = ({ link, icon, name, alt }) => (
-  <a href={link} target='_blank' rel='noopener noreferrer' aria-label={name}>
-    <img src={`icons/${icon}.svg`} alt={alt} />
-  </a>
-);
-
-IconLink.propTypes = {
-  link: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  icon: PropTypes.string.isRequired,
+type TIconLink = {
+    link: string;
+    icon: string;
+    name: string;
+    alt: string;
 };
+
+const IconLink = ({ link, icon, name, alt }: TIconLink) => (
+    <a href={link} target='_blank' rel='noopener noreferrer' aria-label={name}>
+        <Image src={`icons/${icon}.svg`} alt={alt} width={100} height={100} />
+    </a>
+);
 
 export default IconLink;

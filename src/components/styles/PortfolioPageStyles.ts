@@ -15,7 +15,7 @@ const PortfolioPageStyles = styled.div`
         flex-wrap: wrap;
         flex-direction: row;
         padding: 0 0 30px 0;
-        width: 800px;
+        width: 900px;
         max-width: 85%;
         margin: 0 auto 10vh;
         gap: 40px;
@@ -33,7 +33,7 @@ const PortfolioPageStyles = styled.div`
             flex-direction: row;
             align-items: center;
             font-family: ${(props) => props.theme.raleFont};
-            padding: 20px;
+            padding: 30px;
             &:before {
                 content: '';
                 position: absolute;
@@ -83,6 +83,7 @@ const PortfolioPageStyles = styled.div`
                 img {
                     padding: 5px;
                     height: 24px;
+                    width: 24px;
                 }
             }
             .main-icon img {

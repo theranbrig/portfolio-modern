@@ -35,26 +35,10 @@ class MyDocument extends Document {
                     {this.props.styleTags}
                 </Head>
                 <body style={{ margin: '0', width: '100%', backgroundColor: '#272727' }}>
-                    <form name='contact' netlify='true' netlify-honeypot='bot-field' hidden>
-                        <input type='text' name='title' />
-                        <input type='email' name='email' />
-                        <textarea name='message' />
-                    </form>
                     <Main />
                     <NextScript />
                 </body>
-                <script
-                    dangerouslySetInnerHTML={{
-                        __html: `
-              (function() {
-                const link = document.createElement('link');
-                link.rel = "stylesheet";
-                link.href = '//fonts.googleapis.com/css2?family=Fira+Code:wght@100;300&family=Major+Mono+Display&family=Raleway:wght@100;300;400&family=Roboto:wght@100;300;400;500&display=swap';
-                document.querySelector("head").appendChild(link);
-              })();
-                  `,
-                    }}
-                ></script>
+                <script></script>
             </html>
         );
     }

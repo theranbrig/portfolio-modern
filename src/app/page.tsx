@@ -1,10 +1,9 @@
 'use client';
 
-import Layout from '@/components/Layout';
 import { motion } from 'framer-motion';
-import { NextSeo } from 'next-seo';
 import { ReactTyped } from 'react-typed';
 import IconLink from '../components/IconLink';
+import Layout from '../components/Layout';
 import HomePageStyles from '../components/styles/HomePageStyles';
 
 const Home = () => {
@@ -12,7 +11,6 @@ const Home = () => {
 
     return (
         <Layout>
-            <NextSeo title='Theran Brigowatz | Home' description='Web Developer and UI Consultant' />
             <motion.div
                 exit={{ opacity: 0, scale: 0 }}
                 initial={{ opacity: 0, scale: 0.8 }}

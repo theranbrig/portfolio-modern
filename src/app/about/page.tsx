@@ -1,16 +1,14 @@
 'use client';
-import ProgressiveImage from '@/components/ProgressiveImage';
-import { icons, skills } from '../../../public/data';
-
-import AboutPageStyles from '@/components/styles/AboutPageStyles';
 import { motion } from 'framer-motion';
-import { NextSeo } from 'next-seo';
+import Image from 'next/image';
+import { icons, skills } from '../../../public/data';
 import Layout from '../../components/Layout';
+import ProgressiveImage from '../../components/ProgressiveImage';
+import AboutPageStyles from '../../components/styles/AboutPageStyles';
 
 const About = () => {
     return (
         <Layout>
-            <NextSeo title='Theran Brigowatz | About' description='Learn more about my journey as a developer' />
             <AboutPageStyles>
                 <motion.div
                     exit={{ opacity: 0, scale: 0 }}
@@ -51,7 +49,7 @@ const About = () => {
                                 <ul className='daily-list'>
                                     {icons.map((icon) => (
                                         <li key={icon.icon}>
-                                            <img src={`icons/${icon.icon}.svg`} />
+                                            <Image src={`icons/${icon.icon}.svg`} alt={icon.skill} height={100} width={100} />
                                             <p>{icon.skill}</p>
                                         </li>
                                     ))}
@@ -67,7 +65,7 @@ const About = () => {
                             </div>
                             <h3>Skills In the Pipeline</h3>
                             <div className='skills-to-learn'>
-                                <p>Give me your best shot. I'll take on anything else you throw at me.*</p>
+                                <p>Give me your best shot. I will take on anything else you throw at me.*</p>
                                 <p>*Also Sausage Making and Charcuterie.</p>
                             </div>
                         </div>

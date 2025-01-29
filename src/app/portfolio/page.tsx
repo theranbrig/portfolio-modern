@@ -1,15 +1,13 @@
 'use client';
-import ProjectCard from '@/components/ProjectCard';
 import { motion } from 'framer-motion';
-import { NextSeo } from 'next-seo';
-import data from '../../../public/data';
+import data, { TProject } from '../../../public/data';
 import Layout from '../../components/Layout';
+import ProjectCard from '../../components/ProjectCard';
 import PortfolioPageStyles from '../../components/styles/PortfolioPageStyles';
 
 const Portfolio = () => {
     return (
         <Layout>
-            <NextSeo title='Theran Brigowatz | Portfolio' description='Check out some of the work that I have done.' />
             <motion.div
                 exit={{ opacity: 0, scale: 0 }}
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -20,7 +18,7 @@ const Portfolio = () => {
                     <h1>Portfolio</h1>
                     <h2>See some code and screenshots.</h2>
                     <div className='project-list'>
-                        {data.map((project: any) => (
+                        {data.map((project: TProject) => (
                             <ProjectCard project={project} key={project.title} />
                         ))}
                         <p>

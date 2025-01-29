@@ -10,6 +10,7 @@ export type TProject = {
     screenShots: { image: string; preview: string }[];
     icon: string;
     tech: string[];
+    mobile?: boolean;
 };
 
 export default [
