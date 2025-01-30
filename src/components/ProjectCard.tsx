@@ -10,7 +10,7 @@ const ProjectCard = ({ project }: { project: TProject }) => {
             <Link href={`/portfolio/[slug]`} as={`/portfolio/${slug}`}>
                 <div className='project-link'>
                     <div className='main-icon'>
-                        <Image src={`icons/${icon}.svg`} alt={icon} height={100} width={100} />
+                        <img src={`icons/${icon}.svg`} alt={icon} />
                     </div>
                     <div className='project-info'>
                         <h3>{title}</h3>

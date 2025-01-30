@@ -1,6 +1,5 @@
 'use client';
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 import Link from 'next/link';
 import { blogPosts } from '../../../public/data';
 import Layout from '../../components/Layout';
@@ -29,7 +28,7 @@ const Blogs = () => {
                         {posts.map((post) => (
                             <Link href='/blog/[year]?id=[id]' as={`/blog/${post.slug}`} key={post.slug}>
                                 <div className='post-container'>
-                                    <Image src={post.image} alt={post.title} width={100} height={100} />
+                                    <img src={post.image} alt={post.title} />
                                     <div className='post-description'>
                                         <h2>{post.title}</h2>
                                         <div>
