@@ -15,6 +15,36 @@ export type TProject = {
 
 export default [
     {
+        title: 'Horn',
+        technology: 'React, TypeScript, CSS3, HTML5, React Native, Jest, Playwright',
+        created: 'Fall 2021',
+        description: 'Realtime WebRTC Conferencing Platform',
+        slug: 'horn',
+        extendedDescription: [
+            'Horn is a modern real-time communication platform, enabling seamless video, audio, chat, and the MIDI protocol. Leveraging WebRTC, Horn provides low-latency, high-quality voice and video calls, making it easy for teams and users to connect in real time. By integrating real-time media streaming and AI-driven automation, Horn empowers businesses to offer dynamic, engaging communication experiences.',
+            'At Horn, I played a key role in developing and optimizing the platform’s core features, focusing on scalability, performance, and seamless integrations. I rebuilt the UI from the ground-up to modernize the interface. I worked extensively with Node.js, and TypeScript, building a TypeScript SDK API that supported real-time interactions and efficient message handling across multiple channels. Additionally, I contributed to refining the AI-driven automation tools that enhance support efficiency.',
+            'Beyond engineering, I collaborated closely product teams to improve user experience and feature usability, ensuring that the platform met the evolving needs of businesses and their communities. My work at Horn reinforced my ability to build end-to-end SaaS solutions in a fast-moving startup environment while staying focused on performance, security, and scalability.',
+        ],
+        gitLink: null,
+        deployLink: 'https://horn.co',
+        screenShots: [
+            {
+                image: 'https://res.cloudinary.com/dq7uyauun/image/upload/v1742191824/hero1_twqgdp.webp',
+                preview: 'https://res.cloudinary.com/dq7uyauun/image/upload/c_scale,q_10,w_10/v1742191824/hero1_twqgdp.webp',
+            },
+            {
+                image: 'https://res.cloudinary.com/dq7uyauun/image/upload/v1742191824/hero2_z97sqj.webp',
+                preview: 'https://res.cloudinary.com/dq7uyauun/image/upload/c_scale,q_10,w_10/v1742191824/hero1_twqgdp.webp',
+            },
+            {
+                image: 'https://res.cloudinary.com/dq7uyauun/image/upload/v1742191825/hero3_kfxntp.webp',
+                preview: 'https://res.cloudinary.com/dq7uyauun/image/upload/c_scale,q_10,w_10/v1742191824/hero1_twqgdp.webp',
+            },
+        ],
+        icon: 'horn',
+        tech: ['react', 'typescript', 'css3', 'html5', 'node-dot-js', 'jest'],
+    },
+    {
         title: 'YZED',
         technology: 'Next.js React, Firebase, WebGL Modeling, AR',
         created: 'Spring 2020',

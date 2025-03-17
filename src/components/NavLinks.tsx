@@ -6,11 +6,11 @@ const NavLinks = () => {
             <Link activeClassName='active' href='/'>
                 <p>Home</p>
             </Link>
-            <Link activeClassName='active' href='/blog'>
-                <p>Blog</p>
-            </Link>
             <Link activeClassName='active' href='/portfolio'>
                 <p>Work</p>
+            </Link>
+            <Link activeClassName='active' href='/blog'>
+                <p>Blog</p>
             </Link>
             <Link activeClassName='active' href='/about'>
                 <p> About</p>

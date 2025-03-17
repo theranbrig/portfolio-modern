@@ -5,6 +5,7 @@ import { useParams } from 'next/navigation';
 import data, { TProject } from '../../../../public/data';
 import Layout from '../../../components/Layout';
 import ProjectLayout from '../../../components/ProjectLayout';
+import { ToTop } from '@/components/ToTop';
 
 export default function Project() {
     const params = useParams();
@@ -22,6 +23,7 @@ export default function Project() {
                 transition={{ type: 'spring', ease: 'easeIn', duration: 1, mass: 0.5 }}
             >
                 <ProjectLayout project={project} />
+                <ToTop />
             </motion.div>
         </Layout>
     );

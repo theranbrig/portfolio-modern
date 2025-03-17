@@ -9,6 +9,7 @@ const BlogPageStyles = styled.div`
     padding-bottom: 15vh;
     color: ${(props) => props.theme.white};
     font-family: ${(props) => props.theme.firaFont};
+    position: relative;
     p,
     h2,
     h3,
@@ -160,6 +161,8 @@ const BlogPageStyles = styled.div`
     .language {
         display: block !important;
         width: 100% !important;
+        border-radius: 5px !important;
+        padding: 15px !important;
     }
     ul {
         list-style-type: none !important;

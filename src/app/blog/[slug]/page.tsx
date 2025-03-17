@@ -7,6 +7,7 @@ import { blogPosts, TBlogPost } from '../../../../public/data';
 import Layout from '../../../components/Layout';
 import Post from '../../../components/Post';
 import BlogPageStyles from '../../../components/styles/BlogPageStyles';
+import { ToTop } from '@/components/ToTop';
 
 export default function BlogId({}) {
     const params = useParams();
@@ -52,6 +53,7 @@ export default function BlogId({}) {
                     <Link href='/blog'>
                         <div className='back-link'>Back</div>
                     </Link>
+                    <ToTop />
                 </motion.div>
             </BlogPageStyles>
         </Layout>

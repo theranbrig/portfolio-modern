@@ -50,8 +50,9 @@ const ContactPageStyles = styled.div`
                 color: ${(props) => props.theme.white};
             }
             img {
-                height: 3rem;
-                padding: 5px;
+                height: 3.5rem;
+                width: 3.5rem;
+                padding: 10px;
                 @media (max-width: 900px) {
                     font-size: 2.8rem;
                 }

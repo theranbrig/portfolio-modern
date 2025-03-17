@@ -39,9 +39,6 @@ const ProjectLayout = ({ project }: { project: TProject }) => {
                             Built with: <strong>{technology}</strong>
                         </p>
                         <p>Started in {created}</p>
-                        <Link href='/portfolio'>
-                            <Image src='../icons/return.svg' alt='return' height={100} width={100} /> <span>Back To Portfolio</span>
-                        </Link>
                     </div>
                 </div>
                 <div className='project-right'>
@@ -52,6 +49,9 @@ const ProjectLayout = ({ project }: { project: TProject }) => {
                             ))}
                     </div>
                 </div>
+                <Link href='/portfolio'>
+                    <span>Back </span>
+                </Link>
             </div>
         </ProjectStyles>
     );

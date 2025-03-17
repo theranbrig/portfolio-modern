@@ -33,6 +33,9 @@ class MyDocument extends Document {
                     <link rel='icon' type='image/png' sizes='32x32' href='/favicon-32x32.png' />
                     <link rel='icon' type='image/png' sizes='16x16' href='/favicon-16x16.png' />
                     {this.props.styleTags}
+                    <meta name='description' content='Theran Brigowatz - Web Developer and UI Consultant' />
+                    <meta property='og:title' content='Theran Brigowatz - Web Developer and UI Consultant' />
+                    <meta property='og:description' content='All about me. A software engineer and UI Consultant.' />
                 </Head>
                 <body style={{ margin: '0', width: '100%', backgroundColor: '#272727' }}>
                     <Main />

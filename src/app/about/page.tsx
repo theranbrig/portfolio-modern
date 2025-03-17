@@ -27,20 +27,20 @@ const About = () => {
                         </div>
                         <h2>therAn briGoWAtz</h2>
                         <p>
-                            I am a Web Developer with an eye for design who decided to make a career change after more than a decade in the education industry.
-                            I work on web and mobile application development platforms. I have a passion and obsession for all things code and development. With
-                            over five years of experience as a developer, I know what it takes to build a great product.
+                            I’m a Web and Mobile Developer with an eye for design and a passion for building great products. After over a decade in the
+                            education industry, I made the transition to software development, and for the past five-plus years, I’ve been creating web and
+                            mobile applications that are both functional and visually engaging. I thrive on solving complex problems, continuously learning new
+                            technologies, and collaborating with teams to bring ideas to life.
                         </p>
                         <p>
-                            After a decade of energetic kids and stacks of essays to grade, while teaching in South Korea, coding has given me a new enthusiasm
-                            for a career that I love. Since my childhood, starting with Lego, I have had a passion to create, whether it be art, food, or DIY.
-                            My interest in new technology is something that I have always had a great curiosity in pursuing and learning. I am constantly
-                            pushing myself to learn and grow as programmer. I enjoy spending time with my family, traveling, cooking, brewing craft beer,
-                            playing hockey, and the Minnesota Golden Gophers.
+                            Before coding, I spent years teaching in South Korea, navigating energetic classrooms and endless stacks of essays. That experience
+                            honed my ability to break down complex concepts—something I now apply to development. My love for creating started with Lego as a
+                            kid and has since expanded to art, food, DIY projects, and, of course, software. When I’m not coding, you’ll find me traveling,
+                            cooking, brewing craft beer, playing hockey, or cheering on the Minnesota Golden Gophers.
                         </p>
                         <p>
-                            I am open to work remote opportunities and open to working overlap with any timezone. I am always looking for new challenges and new
-                            oppportunities for growth.
+                            I’m open to remote opportunities with timezone flexibility and always excited for new challenges that push me to grow. Let’s build
+                            something amazing together.
                         </p>
                         <div className='skills-box'>
                             <h3>My Tech Stack</h3>
