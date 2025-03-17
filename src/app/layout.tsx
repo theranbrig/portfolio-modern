@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import type { Metadata } from 'next';
 import { Fira_Code, Geist, Geist_Mono, Major_Mono_Display, Open_Sans, Raleway, Roboto } from 'next/font/google';
@@ -54,6 +55,7 @@ export default function RootLayout({
                 className={`${geistSans.variable} ${geistMono.variable} ${roboto.className} ${openSans.className} ${firaCode.className} ${majorMono.className} ${raleway.className} `}
             >
                 <SpeedInsights />
+                <Analytics />
                 {children}
             </body>
         </html>
